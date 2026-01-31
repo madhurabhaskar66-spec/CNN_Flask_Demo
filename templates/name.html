@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ name | capitalize }} - CNN Flask Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
-    <h1>hello {{name}}</h1>
-    <img src="{{url_for('static',filename=image)}}">
+    <div class="container">
+        <div class="header animate-in">
+            <h1 class="name-title">{{ name | replace('_', ' ') }}</h1>
+        </div>
+
+        <div class="card animate-in delay-1">
+            <div class="image-container">
+                <img src="{{ url_for('static', filename=image) }}" alt="{{ name }}">
+            </div>
+        </div>
+
+        <div class="nav-links animate-in delay-2" style="margin-top: 2rem;">
+            <a href="{{ url_for('index') }}" class="nav-link">← Back to Home</a>
+        </div>
+
+        <footer class="footer animate-in delay-3">
+            <p>Built with Flask & ❤️</p>
+        </footer>
+    </div>
 </body>
+
 </html>

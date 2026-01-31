@@ -5,11 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CNN Flask Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
-    <h1>CNN Flask Demo</h1>
-    <p>Welcome to the CNN Flask Demo application.</p>
+    <div class="container">
+        <div class="header animate-in">
+            <h1>CNN Flask Demo</h1>
+            <p class="subtitle">Welcome to the CNN Flask Demo application</p>
+        </div>
+
+        <div class="card animate-in delay-1">
+            <div class="nav-links">
+                <a href="{{ url_for('name', name='steve') }}" class="nav-link">🎮 Steve</a>
+                <a href="{{ url_for('name', name='stranger_things') }}" class="nav-link">📺 Stranger Things</a>
+                <a href="{{ url_for('name', name='bmw') }}" class="nav-link">🚗 BMW</a>
+                <a href="{{ url_for('name', name='nature') }}" class="nav-link">🌿 Nature</a>
+            </div>
+        </div>
+
+        <div class="animate-in delay-2" style="margin-top: 2rem;">
+            <a href="https://www.google.com/search?q=google&sca_esv=d6b133a3ec0f132f&sxsrf=ANbL-n659y7Lp_6xauerA0_63wXfbv1ufQ%3A1769850868968&ei=9Md9afnjOuyD0PEP5_PGoQ4&ved=0ahUKEwj5reaiuLWSAxXsATQIHee5MeQQ4dUDCBE&uact=5&oq=google&gs_lp=Egxnd3Mtd2l6LXNlcnAiBmdvb2dsZTIKECMYgAQYJxiKBTIKECMYgAQYJxiKBTIKECMYgAQYJxiKBTIWEC4YgAQYsQMY0QMYQxiDARjHARiKBTINEAAYgAQYsQMYQxiKBTIQEAAYgAQYsQMYQxiDARiKBTIKEAAYgAQYQxiKBTINEAAYgAQYsQMYQxiKBTIQEAAYgAQYsQMYQxiDARiKBTINEAAYgAQYsQMYQxiKBUi1JlAAWOcZcAF4AZABAJgBtwGgAccHqgEDMC42uAEDyAEA-AEBmAIHoALqB6gCEsICDRAuGIAEGCcYigUY6gLCAg0QIxiABBgnGIoFGOoCwgINECMY8AUYJxjJAhjqAsICExAjGPAFGIAEGCcYyQIYigUY6gLCAhMQLhiABBjRAxjHARgnGIoFGOoCwgITECMY8AUYgAQYJxiKBRjqAhieBsICGRAuGIAEGEMYtAIY5wYYyAMYigUY6gLYAQHCAhAQLhiABBjRAxjHARgnGIoFwgIKEC4YgAQYQxiKBcICCxAAGIAEGLEDGIMBwgIdEC4YgAQY0QMYxwEYigUYlwUY3AQY3gQY4ATYAQHCAgQQIxgnmAMG8QXRJz_-T_fJ8roGBggBEAEYCJIHAzEuNqAHg1uyBwMwLja4B-QHwgcFMC4zLjTIBxqACAA&sclient=gws-wiz-serp" class="external-link" target="_blank">
+                Search on Google
+            </a>
+        </div>
+
+        <footer class="footer animate-in delay-3">
+            <p>Built with Flask & ❤️</p>
+        </footer>
+    </div>
 </body>
 
 </html>
